@@ -44,6 +44,6 @@
     ],
     "author": "Dave Hillman",
     "license": "ISC",
-    "proxy": "http://localhost:5000"
+    "proxy": "https://dave-hillman-portfolio-server.onrender.com"
 
 }

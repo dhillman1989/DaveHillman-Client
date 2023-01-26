@@ -17,15 +17,9 @@ const Contact = (props) => {
             </a>
           </li>
           <li>
-            <a href="http://facebook.com/davehillmanwebdeveloper" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook" />
-              Facebook
-            </a> 
-          </li>
-          <li>
-            <a href="http://github.com/dhillman1989" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github" />
-              Github
+            <a href="https://www.youtube.com/@codewithdave" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-youtube" />
+              YouTube
             </a>
           </li>
           <li>

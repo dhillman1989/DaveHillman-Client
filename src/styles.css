@@ -1,19 +1,35 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 html,
 body {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-  background: rgba(94, 94, 94, 0.2);
-  padding: 0;
-  margin: 0;
-  font-family: "Muli", sans-serif;
+    background: rgba(94, 94, 94, 0.2);
+    padding: 0;
+    margin: 0;
+    font-family: "Muli", sans-serif;
 }
 
 .App {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.fa-youtube:hover {
+    color: #c4302b;
+    text-shadow: 0 0 4px #666;
+}
+
+.fa-envelope:hover {
+    color: #FCAF45;
+    text-shadow: 0 0 4px #666;
+}
+
+.fa-instagram:hover {
+    color: #E1306C;
+    text-shadow: 0 0 4px #666;
 }
