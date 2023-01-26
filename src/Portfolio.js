@@ -19,6 +19,7 @@ const Portfolio = (props) => {
       await setItems(res.data);
     }
   useEffect(() => {
+    console.log(items)
     getUploads();
   }, []);
 
@@ -30,10 +31,11 @@ const Portfolio = (props) => {
       </div>
       <div className={classes.portfolioList}>
 
-        {items.length <= 0 ?
+        {(!items || items.length === 0) ?
           <div className={classes.spinner}><Spinner /></div> :
-          (items > 0 && items.map(item =>
-            <PortfolioItem key={item._id} title={item.title} description={item.description} url={item.url} content={item.content} tags={item.tags.split(",")} />)
+          (items > 0 && items.map(item =>{console.log(items);
+            return(
+            <PortfolioItem key={item._id} title={item.title} description={item.description} url={item.url} content={item.content} tags={item.tags.split(",")} />);})
           )
         }
         
