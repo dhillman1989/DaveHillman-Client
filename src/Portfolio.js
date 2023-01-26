@@ -30,7 +30,7 @@ const Portfolio = (props) => {
       <div className={classes.portfolioList}>
         {items === null ?
           <div className={classes.spinner}><Spinner /></div> :
-          (items.map(item =>
+          (items && items != null && items.map(item =>
             <PortfolioItem key={item._id} title={item.title} description={item.description} url={item.url} content={item.content} tags={item.tags.split(",")} />)
           )
         }
