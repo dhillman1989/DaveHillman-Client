@@ -15,7 +15,6 @@ const Portfolio = (props) => {
   const { classes } = props;
   const getUploads = async () => {
       const res = await axios.get("/upload");
-      console.log(res.data);
       await setItems(res.data);
     }
   useEffect(() => {
@@ -31,7 +30,7 @@ const Portfolio = (props) => {
       </div>
       <div className={classes.portfolioList}>
 
-        {(!items || items.length === 0) ?
+        {(!items || typeof(items) != "Array" || items.length === 0) ?
           <div className={classes.spinner}><Spinner /></div> :
           (items > 0 && items.map(item =>{console.log(items);
             return(
