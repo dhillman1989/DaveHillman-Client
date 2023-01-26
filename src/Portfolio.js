@@ -20,7 +20,7 @@ const Portfolio = (props) => {
   useEffect(() => {
     console.log(items)
     getUploads();
-  }, []);
+  }, [items]);
 
   return (
     <div className={classes.Portfolio}>
@@ -30,7 +30,7 @@ const Portfolio = (props) => {
       </div>
       <div className={classes.portfolioList}>
 
-        {(!items || typeof(items) != "Array" || items.length === 0) ?
+        {(!items || Array.isArray(items) || items.length === 0) ?
           <div className={classes.spinner}><Spinner /></div> :
           (items > 0 && items.map(item =>{console.log(items);
             return(

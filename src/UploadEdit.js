@@ -53,7 +53,7 @@ const UploadEdit = props => {
     }
 
 
-    useEffect(() => { preloadData() }, [] )
+    useEffect(() => { preloadData() } , [] )
     
 
     return (
