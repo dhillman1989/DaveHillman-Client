@@ -32,7 +32,7 @@ const Portfolio = (props) => {
 
         {items.length <= 0 ?
           <div className={classes.spinner}><Spinner /></div> :
-          (items.map(item =>
+          (items > 0 && items.map(item =>
             <PortfolioItem key={item._id} title={item.title} description={item.description} url={item.url} content={item.content} tags={item.tags.split(",")} />)
           )
         }
