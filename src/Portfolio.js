@@ -17,10 +17,10 @@ const Portfolio = (props) => {
       const res = await axios.get("/upload");
       await setItems(res.data);
     }
+
   useEffect(() => {
-    console.log(items)
     getUploads();
-  }, []);
+  });
 
   return (
     <div className={classes.Portfolio}>
