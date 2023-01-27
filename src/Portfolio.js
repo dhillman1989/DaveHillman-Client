@@ -20,7 +20,7 @@ const Portfolio = (props) => {
   useEffect(() => {
     console.log(items)
     getUploads();
-  }, [items]);
+  });
 
   return (
     <div className={classes.Portfolio}>
