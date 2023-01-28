@@ -15,12 +15,13 @@ const Portfolio = (props) => {
   const { classes } = props;
   const getUploads = async () => {
       const res = await axios.get("/upload");
-      await setItems(res.data);
+      console.log(res.data)
+      await setItems(res.data)
     }
 
   useEffect(() => {
     getUploads();
-  });
+  }, []);
 
   return (
     <div className={classes.Portfolio}>
@@ -29,12 +30,11 @@ const Portfolio = (props) => {
         <h4>Check out some of my work...</h4>
       </div>
       <div className={classes.portfolioList}>
-
-        {(!items || Array.isArray(items) || items.length === 0) ?
+        {console.log(items)}
+        {(!Array.isArray(items) || items.length === 0) ?
           <div className={classes.spinner}><Spinner /></div> :
-          (items > 0 && items.map(item =>{console.log(items);
-            return(
-            <PortfolioItem key={item._id} title={item.title} description={item.description} url={item.url} content={item.content} tags={item.tags.split(",")} />);})
+          (items.length > 0 && items.map(item =>
+            <PortfolioItem key={item._id} title={item.title} description={item.description} url={item.url} content={item.content} tags={item.tags.split(",")} />)
           )
         }
         
